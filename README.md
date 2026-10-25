@@ -20,7 +20,6 @@ An enterprise-grade Customer Experience (CX) AI Reply Assistant built for the **
 6. [Interactive Verification Test Matrix](#-interactive-verification-test-matrix)
 7. [Repository Structure & Deliverables](#-repository-structure--deliverables)
 8. [Local Setup & Configuration Guide](#-local-setup--configuration-guide)
-9. [5-Minute Demo Video Walkthrough Guide](#-5-minute-demo-video-walkthrough-guide)
 
 ---
 
