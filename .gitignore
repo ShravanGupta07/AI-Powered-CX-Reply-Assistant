@@ -34,3 +34,6 @@ next-env.d.ts
 
 # scratch & analysis
 pdf_*.txt
+*.pdf
+assessment_docs_backup/
+

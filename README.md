@@ -186,7 +186,7 @@ Follow these four core test scenarios in the application:
 
 ---
 
-## 📂 Repository Structure & Deliverables
+## 📂 Repository Structure
 
 ```
 ├── app/
@@ -204,10 +204,6 @@ Follow these four core test scenarios in the application:
 ├── lib/
 │   └── supabase.ts                 # Supabase client singleton & sanitization
 ├── schema.sql                      # PostgreSQL DDL, tables, constraints & seed data
-├── PART_2_SYSTEM_DESIGN.md         # Scale architecture for 500 brands & 5,000 agents
-├── PART_3_AI_COSTS.md              # Root cause analysis & remediation for 5x AI cost spike
-├── PART_4_LEADERSHIP.md            # Technical leadership & team ownership reflections
-├── AI_USAGE.md                     # AI tools disclosure, usage examples, & error fixes
 ├── .env.example                    # Environment variable template
 ├── package.json
 └── tsconfig.json
@@ -252,36 +248,3 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
----
-
-## 🎥 5-Minute Demo Video Walkthrough Guide
-
-Use this time-coded script for the video recording:
-
-* **0:00 – 0:50 | Problem Overview & Workspace Tour:**
-  * Introduce Datastraw CX Copilot. Show 3-pane layout, ticket selection, order details banner, and the customer/agent simulator toggle.
-* **0:50 – 1:50 | Happy Path & Real-Time Telemetry:**
-  * Select Ananya Sharma (broken bottle). Click **Generate Reply** (`Alt+G`).
-  * Highlight 🟢 `APPROVED_BY_POLICY`, retrieved policy, live latency (`ms`), and dynamic tokens recalculating live as you edit the text.
-  * Click **Approve & Send to Customer** (`Alt+A`).
-* **1:50 – 2:50 | Policy Restriction vs. Multi-Brand Isolation:**
-  * Select Rohan Verma (Aura Botanics, 20-day refund request) $\to$ 🟡 `POLICY_RESTRICTION` declining refund.
-  * Select Vikram Nair (Titan Gear, 20-day refund request) $\to$ 🟢 `APPROVED_BY_POLICY` approving refund.
-  * Explain how strict tenant isolation prevents policy leakage between brands.
-* **2:50 – 3:45 | Missing Info Guardrail & Live Policy CRUD:**
-  * Simulate customer query: *"Do you have an offline retail store in Bengaluru?"* $\to$ 🔴 `MISSING_KB_INFO`.
-  * Open **Brand Policies** tab, add the Bengaluru Store policy, return to workspace, click **Regenerate**, and demonstrate immediate incorporation.
-* **3:45 – 4:30 | Verified Audit Trail:**
-  * Open **Audit Trail** tab. Show that only genuine sent messages are logged, showing initial AI draft, agent edits, final sent reply, latency, tokens, and JSON export.
-* **4:30 – 5:00 | System Scale & Leadership Vision:**
-  * Briefly summarize Part 2 (scaling to 500 brands & 5,000 agents via Redis queues and tenant-partitioned vector indexing).
-  * State the one thing you would improve with more time (streaming token delivery with inline source citation highlights).
-
----
-
-## 📄 Assessment Deliverables Index
-* **Part 1 (Code & App):** [`app/`](./app/), [`schema.sql`](./schema.sql), [`lib/`](./lib/)
-* **Part 2 (Architecture Document):** [`PART_2_SYSTEM_DESIGN.md`](./PART_2_SYSTEM_DESIGN.md)
-* **Part 3 (AI Cost Engineering):** [`PART_3_AI_COSTS.md`](./PART_3_AI_COSTS.md)
-* **Part 4 (Leadership & Ownership):** [`PART_4_LEADERSHIP.md`](./PART_4_LEADERSHIP.md)
-* **AI Tooling Reflection:** [`AI_USAGE.md`](./AI_USAGE.md)
