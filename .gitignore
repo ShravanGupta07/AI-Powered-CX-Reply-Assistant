@@ -35,5 +35,10 @@ next-env.d.ts
 # scratch & analysis
 pdf_*.txt
 *.pdf
+*.docx
+scratch_*.js
+generate_*.js
+architecture_diagram.*
 assessment_docs_backup/
+
 
